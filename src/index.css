@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 267px;
+  flex-shrink: 0;
+  background: #1e293b;
+  border-right: 4px solid #0f172a;
+}
+
+.usuario {
+  height: 97px;
+  padding: 12px;
+  background: #1e3f87;
+  color: #cbd5e1;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.enlace {
+  display: block;
+  padding: 20px 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.enlace:hover,
+.enlace.activo {
+  background: #263449;
+  color: #fff;
+}
+
+.principal {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e293b;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 44px;
+  color: #e5e7eb;
+}
+
+.contenido {
+  padding: 30px;
+}
+
+.contenido h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: #f1f5f9;
+}
+
+.contenido p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tarjeta {
+  width: 300px;
+  padding-bottom: 15px;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  height: 138px;
+  object-fit: cover;
+}
+
+.tarjeta h3,
+.tarjeta p,
+.tarjeta button {
+  margin-left: 15px;
+}
+
+.tarjeta h3 {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.tarjeta p {
+  margin-top: 0;
+  margin-bottom: 14px;
+  min-height: 40px;
+  font-size: 15px;
+  color: #94a3b8;
+}
+
+.tarjeta button {
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tarjeta button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .usuario {
+    height: auto;
+  }
+  .topbar h1 {
+    font-size: 28px;
+  }
+}
